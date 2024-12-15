@@ -73,7 +73,7 @@ void Epoll_ctl(int enfd , int op , int fd , struct epoll_event* event) {
 
 int Epoll_wait(int enfd , struct epoll_event* events , int maxevents , int timeout) {
     int ret;
-    if((ret = epoll_wait(enfd , events , maxevents , timeout)) < 0) {
+    if((ret = epoll_wait(enfd , events , maxevents , timeout)) < 0 && errno != EINTR) {
         error_handler("Epoll_wait failed()!");
     }
     return ret;
@@ -86,3 +86,29 @@ int setnoblocking(int fd) {
     return old_option;   
 }
 
+void Pipe(int pipefd[2]) {
+    if((pipe(pipefd)) < 0) {
+        error_handler("Pipe() failed!");
+    }
+}
+
+void Sigaction(int signum , const struct sigaction* act , struct sigaction* oldact) {
+    if(sigaction(signum , act , oldact) < 0) {
+        error_handler("Sigaction() failed!");
+    }
+}
+
+void Sigprocmask(int how , const sigset_t* set , sigset_t* oldset) {
+    if(sigprocmask(how , set , oldset) < 0) {
+        error_handler("Sigprocmask() failed!");
+    }
+}
+
+
+void Addfd(int epollfd , int fd) {
+    struct epoll_event event;
+    event.data.fd = fd;
+    event.events = EPOLLIN | EPOLLET ;
+    Epoll_ctl(epollfd , EPOLL_CTL_ADD , fd , &event);
+    setnoblocking(fd);
+}
