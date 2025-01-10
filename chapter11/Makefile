@@ -8,7 +8,7 @@ timerimpl = $(wildcard ./Timer/src/*.cc)
 
 all: $(out)
 $(out):%:%.cc
-	$(CC) $< $(networkimpl) $(timerimpl) -o $@ -I $(network)  -I $(timer) 
+	$(CC) $< $(networkimpl) $(timerimpl) -o $@ -I $(network)  -I $(timer) -g 
 
 clean:
 	-rm -rf $(out)

@@ -1,13 +1,14 @@
 /* 处理非活动连接 */
-#include "LinkedListTimer.h"
+#include "WheelTimer.h"
 #include "network.h"
 
 #define MAX_USER_NUMBER 1024
 #define MAX_EVENT_NUMBER 1024 /* 最大可以监听的数量 */
 #define TIMESHOT 5 /* 过期时间 */
+#define TIMECP 1
 
 static int pipefd[2]; /* 信号处理的管道 */
-static sort_timer_list timer_list;  /* 升序链表 */
+static time_wheel wheel;  /* 升序链表 */
 static int epollfd = 0;  /* epoll 文件描述符 */
 
 void sig_handler(int sig);  /* 信号处理函数 */
@@ -24,8 +25,8 @@ void sig_handler(int sig)
 
 void timer_handler()
 {
-    timer_list.tick();
-    alarm(TIMESHOT);  /* 继续产生周期性的时钟信号 */
+    wheel.tick();
+    alarm(TIMECP);  /* 继续产生周期性的时钟信号 */
 }
 
 void cb_func(client_data* user) 
@@ -70,7 +71,7 @@ int main(int argc , char** argv) {
 
     Listen(listenfd , MAX_USER_NUMBER);
 
-    timer_list = sort_timer_list();
+    wheel = time_wheel();
     Pipe(pipefd);
     epollfd = Epoll_create(MAX_EVENT_NUMBER);
     Addfd(epollfd , listenfd);
@@ -82,7 +83,7 @@ int main(int argc , char** argv) {
 
     setsockopt(listenfd , SOCK_STREAM , SO_REUSEADDR , &optval , sizeof(optval));
 
-    alarm(TIMESHOT);
+    alarm(TIMECP);
     while(!server_stop) {
         number = Epoll_wait(epollfd , events , MAX_EVENT_NUMBER , -1);
         if((number == -1) && (errno != EINTR)) {
@@ -98,12 +99,9 @@ int main(int argc , char** argv) {
                 Addfd(epollfd , connfd);
                 users[connfd].address = clnt_addr;
                 users[connfd].sockfd = connfd;
-                util_timer* timer = new util_timer;
-                timer -> client = &users[connfd];
-                time_t cur = time(nullptr);
-                timer -> expire = cur + 3 * TIMESHOT;
-                timer -> callback = cb_func;
-                timer_list.add_timer(timer);
+                tw_timer* timer = wheel.add_timer(TIMESHOT); 
+                timer -> cb_func = cb_func;
+                timer -> user = &users[connfd];
                 users[connfd].timer = timer;
             } 
 
@@ -137,32 +135,31 @@ int main(int argc , char** argv) {
                 memset(users[sockfd].buf , 0 , sizeof(users[sockfd].buf));
                 ret = recv(sockfd , users[sockfd].buf , sizeof(users[sockfd].buf), 0);
                 printf("get %d bytes client msg: %s from %d \n" , ret , users[sockfd].buf , sockfd); 
-                util_timer* timer = users[sockfd].timer ; 
+                tw_timer* timer = users[sockfd].timer ; 
                 if(ret == -1) {
                     if(errno != EAGAIN) {
                         cb_func(&users[sockfd]);
                         if(timer) {
-                            timer_list.del_timer(timer);
+                            wheel.del_timer(timer);
                         }
                     }
                 } else if(ret == 0) {
                     cb_func(&users[connfd]);
                     if(timer) {
-                        timer_list.del_timer(timer);
+                        wheel.del_timer(timer);
                     }
                 } else {
                     /* 正常维持连接所以可以增加连接时间 */
                     if(timer) {
-                        time_t cur = time(nullptr);
-                        timer -> expire = cur + 3 * TIMESHOT;
-                        timer_list.adjust_timer(timer);
+                        // timer -> rotation ++; 
+                        wheel.adjust_timer(timer , TIMESHOT);
                     }
                }
             }
         }
                /* 处理定时时间 */
                if(timeout) {
-                    printf("TIMEOUT !\n");
+                    printf("...tick...\n");
                     timer_handler();
                     timeout = false;
                }
