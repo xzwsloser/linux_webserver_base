@@ -1,0 +1,185 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Accept	utils/network.c	/^int Accept(int sockfd , struct sockaddr_in* addr , socklen_t* addr_len) {$/;"	f
+Accept	utils/network.cc	/^int Accept(int sockfd , struct sockaddr_in* addr , socklen_t* addr_len) {$/;"	f
+AddSig	chapter11/sigHandler.cc	/^void AddSig(int sig) {$/;"	f
+AddSig	chapter11/sigHandler_heap.cc	/^void AddSig(int sig) {$/;"	f
+AddSig	chapter11/sigHandler_tw.cc	/^void AddSig(int sig) {$/;"	f
+Addfd	utils/network.c	/^void Addfd(int epollfd , int fd) {$/;"	f
+Addfd	utils/network.cc	/^void Addfd(int epollfd , int fd) {$/;"	f
+BUFSIZE	chapter11/Timer/inc/HeapTimer.h	6;"	d
+BUFSIZE	chapter11/Timer/inc/LinkedListTimer.h	6;"	d
+BUFSIZE	chapter11/Timer/inc/WheelTimer.h	5;"	d
+Bind	utils/network.c	/^void Bind(int sockfd , const struct sockaddr_in* addr , socklen_t addr_len ) {$/;"	f
+Bind	utils/network.cc	/^void Bind(int sockfd , const struct sockaddr_in* addr , socklen_t addr_len ) {$/;"	f
+CC	chapter11/Makefile	/^CC = g++$/;"	m
+CLIENT_LEN	chapter9/chat_server.c	3;"	d	file:
+Connect	utils/network.c	/^void Connect(int sockfd , const struct sockaddr_in* addr , socklen_t addr_len) {$/;"	f
+Connect	utils/network.cc	/^void Connect(int sockfd , const struct sockaddr_in* addr , socklen_t addr_len) {$/;"	f
+Epoll_create	utils/network.c	/^int Epoll_create( int size ) {$/;"	f
+Epoll_create	utils/network.cc	/^int Epoll_create( int size ) {$/;"	f
+Epoll_ctl	utils/network.c	/^void Epoll_ctl(int enfd , int op , int fd , struct epoll_event* event) {$/;"	f
+Epoll_ctl	utils/network.cc	/^void Epoll_ctl(int enfd , int op , int fd , struct epoll_event* event) {$/;"	f
+Epoll_wait	utils/network.c	/^int Epoll_wait(int enfd , struct epoll_event* events , int maxevents , int timeout) {$/;"	f
+Epoll_wait	utils/network.cc	/^int Epoll_wait(int enfd , struct epoll_event* events , int maxevents , int timeout) {$/;"	f
+HEAP_SIZE	chapter11/sigHandler_heap.cc	9;"	d	file:
+Listen	utils/network.c	/^void Listen(int sockfd , int backlog) {$/;"	f
+Listen	utils/network.cc	/^void Listen(int sockfd , int backlog) {$/;"	f
+MAX_CLIENT_NUM	chapter9/chat_server.c	4;"	d	file:
+MAX_EPOLL_EVENTS	chapter9/epoll_server_et.c	2;"	d	file:
+MAX_EPOLL_SIZE	chapter9/chat_client.c	3;"	d	file:
+MAX_EPOLL_SIZE	chapter9/chat_server.c	5;"	d	file:
+MAX_EVENTS_NUMBER	chapter9/epoll_server.c	3;"	d	file:
+MAX_EVENT_NUMBER	chapter11/sigHandler.cc	6;"	d	file:
+MAX_EVENT_NUMBER	chapter11/sigHandler_heap.cc	6;"	d	file:
+MAX_EVENT_NUMBER	chapter11/sigHandler_tw.cc	6;"	d	file:
+MAX_USER_NUMBER	chapter11/sigHandler.cc	5;"	d	file:
+MAX_USER_NUMBER	chapter11/sigHandler_heap.cc	5;"	d	file:
+MAX_USER_NUMBER	chapter11/sigHandler_tw.cc	5;"	d	file:
+N	chapter11/Timer/inc/WheelTimer.h	/^    static const int N = 60;  \/* 总共的槽位数量 *\/$/;"	m	class:time_wheel
+Pipe	utils/network.c	/^void Pipe(int pipefd[2]) {$/;"	f
+Pipe	utils/network.cc	/^void Pipe(int pipefd[2]) {$/;"	f
+Poll	utils/network.c	/^int Poll(struct pollfd* fds , nfds_t nfds , int timeout) {$/;"	f
+Poll	utils/network.cc	/^int Poll(struct pollfd* fds , nfds_t nfds , int timeout) {$/;"	f
+SI	chapter11/Timer/inc/WheelTimer.h	/^    static const int SI = 1;  \/* 每一次 tick 的时间间隔 *\/$/;"	m	class:time_wheel
+Select	utils/network.c	/^int Select(int nfds , fd_set* read_set , fd_set* write_set , fd_set* exception_set , struct timeval* timeout) {$/;"	f
+Select	utils/network.cc	/^int Select(int nfds , fd_set* read_set , fd_set* write_set , fd_set* exception_set , struct timeval* timeout) {$/;"	f
+Sigaction	utils/network.c	/^void Sigaction(int signum , const struct sigaction* act , struct sigaction* oldact) {$/;"	f
+Sigaction	utils/network.cc	/^void Sigaction(int signum , const struct sigaction* act , struct sigaction* oldact) {$/;"	f
+Sigprocmask	utils/network.c	/^void Sigprocmask(int how , const sigset_t* set , sigset_t* oldset) {$/;"	f
+Sigprocmask	utils/network.cc	/^void Sigprocmask(int how , const sigset_t* set , sigset_t* oldset) {$/;"	f
+Socket	utils/network.c	/^int Socket(int domain , int type , int protocol) {$/;"	f
+Socket	utils/network.cc	/^int Socket(int domain , int type , int protocol) {$/;"	f
+TIMECP	chapter11/sigHandler_heap.cc	8;"	d	file:
+TIMECP	chapter11/sigHandler_tw.cc	8;"	d	file:
+TIMESHOT	chapter11/sigHandler.cc	7;"	d	file:
+TIMESHOT	chapter11/sigHandler_heap.cc	7;"	d	file:
+TIMESHOT	chapter11/sigHandler_tw.cc	7;"	d	file:
+_NET_WORK_H_	utils/network.h	2;"	d
+add_timer	chapter11/Timer/src/HeapTimer.cc	/^void time_heap::add_timer(heap_timer* timer)$/;"	f	class:time_heap
+add_timer	chapter11/Timer/src/LinkedListTimer.cc	/^void sort_timer_list::add_timer(util_timer* timer , util_timer* front)$/;"	f	class:sort_timer_list
+add_timer	chapter11/Timer/src/LinkedListTimer.cc	/^void sort_timer_list::add_timer(util_timer* timer) {$/;"	f	class:sort_timer_list
+add_timer	chapter11/Timer/src/WheelTimer.cc	/^tw_timer* time_wheel::add_timer(int timeout) $/;"	f	class:time_wheel
+address	chapter11/Timer/inc/HeapTimer.h	/^    struct sockaddr_in address;$/;"	m	struct:client_data	typeref:struct:client_data::sockaddr_in
+address	chapter11/Timer/inc/LinkedListTimer.h	/^    struct sockaddr_in address; \/* 客户端 IP 地址信息 *\/$/;"	m	struct:client_data	typeref:struct:client_data::sockaddr_in
+address	chapter11/Timer/inc/WheelTimer.h	/^    struct sockaddr_in address; \/* 客户端地址信息 *\/$/;"	m	struct:client_data	typeref:struct:client_data::sockaddr_in
+addsig	chapter10/signal_source.c	/^void addsig(int sig) {$/;"	f
+adjust_timer	chapter11/Timer/src/LinkedListTimer.cc	/^void sort_timer_list::adjust_timer(util_timer* timer) $/;"	f	class:sort_timer_list
+adjust_timer	chapter11/Timer/src/WheelTimer.cc	/^void time_wheel::adjust_timer(tw_timer* timer , int timeout)$/;"	f	class:time_wheel
+array	chapter11/Timer/inc/HeapTimer.h	/^    heap_timer** array;  \/* 底层的定时器堆 *\/$/;"	m	class:time_heap
+buf	chapter11/Timer/inc/HeapTimer.h	/^    char buf[BUFSIZE];$/;"	m	struct:client_data
+buf	chapter11/Timer/inc/LinkedListTimer.h	/^    char buf[BUFSIZE];  \/* 读写缓冲区 *\/$/;"	m	struct:client_data
+buf	chapter11/Timer/inc/WheelTimer.h	/^    char buf[BUFSIZE]; \/* 缓冲区 *\/$/;"	m	struct:client_data
+buf	chapter9/chat_server.c	/^    char buf[1024];$/;"	m	struct:__anon1	file:
+callback	chapter11/Timer/inc/LinkedListTimer.h	/^    void(*callback)(client_data*);   \/* 定时回调函数 *\/$/;"	m	class:util_timer
+capacity	chapter11/Timer/inc/HeapTimer.h	/^    int capacity ;   \/* 堆的容量 *\/$/;"	m	class:time_heap
+cb_func	chapter11/Timer/inc/HeapTimer.h	/^    void (*cb_func)(client_data*);  \/* 定时器回调函数 *\/$/;"	m	class:heap_timer
+cb_func	chapter11/Timer/inc/WheelTimer.h	/^    void(*cb_func)(client_data*); \/* 回调函数 *\/$/;"	m	class:tw_timer
+cb_func	chapter11/sigHandler.cc	/^void cb_func(client_data* user) $/;"	f
+cb_func	chapter11/sigHandler_heap.cc	/^void cb_func(client_data* user) $/;"	f
+cb_func	chapter11/sigHandler_tw.cc	/^void cb_func(client_data* user) $/;"	f
+client	chapter11/Timer/inc/LinkedListTimer.h	/^    client_data* client ; \/* 用户对象 *\/$/;"	m	class:util_timer
+client	chapter9/chat_server.c	/^} client ;  \/* 客户信息结构体 *\/$/;"	t	typeref:struct:__anon1	file:
+client_data	chapter11/Timer/inc/HeapTimer.h	/^struct client_data {$/;"	s
+client_data	chapter11/Timer/inc/LinkedListTimer.h	/^struct client_data {$/;"	s
+client_data	chapter11/Timer/inc/WheelTimer.h	/^struct client_data {$/;"	s
+cur_size	chapter11/Timer/inc/HeapTimer.h	/^    int cur_size;  \/* 堆现在的大小 *\/$/;"	m	class:time_heap
+cur_slot	chapter11/Timer/inc/WheelTimer.h	/^    int cur_slot ;  \/* 目前的槽位 *\/$/;"	m	class:time_wheel
+del_timer	chapter11/Timer/src/HeapTimer.cc	/^void time_heap::del_timer(heap_timer* timer)$/;"	f	class:time_heap
+del_timer	chapter11/Timer/src/LinkedListTimer.cc	/^void sort_timer_list::del_timer(util_timer* timer)$/;"	f	class:sort_timer_list
+del_timer	chapter11/Timer/src/WheelTimer.cc	/^void time_wheel::del_timer(tw_timer* timer)$/;"	f	class:time_wheel
+empty	chapter11/Timer/src/HeapTimer.cc	/^bool time_heap::empty() const $/;"	f	class:time_heap
+epollfd	chapter11/sigHandler.cc	/^static int epollfd = 0;  \/* epoll 文件描述符 *\/$/;"	v	file:
+epollfd	chapter11/sigHandler_heap.cc	/^static int epollfd = 0;  \/* epoll 文件描述符 *\/$/;"	v	file:
+epollfd	chapter11/sigHandler_tw.cc	/^static int epollfd = 0;  \/* epoll 文件描述符 *\/$/;"	v	file:
+error_handler	utils/network.c	/^void error_handler(const char* message) {$/;"	f
+error_handler	utils/network.cc	/^void error_handler(const char* message) {$/;"	f
+expire	chapter11/Timer/inc/HeapTimer.h	/^    int expire;  \/* 定时器过期时间 *\/$/;"	m	class:heap_timer
+expire	chapter11/Timer/inc/LinkedListTimer.h	/^    time_t expire;   \/* 定时器过期时间 *\/ $/;"	m	class:util_timer
+head	chapter11/Timer/inc/LinkedListTimer.h	/^    util_timer* head;  \/* 头节点 *\/$/;"	m	class:sort_timer_list
+heap	chapter11/sigHandler_heap.cc	/^static time_heap heap = time_heap(HEAP_SIZE);  \/* 升序链表 *\/$/;"	v	file:
+heap_timer	chapter11/Timer/inc/HeapTimer.h	/^    heap_timer(int delay)$/;"	f	class:heap_timer
+heap_timer	chapter11/Timer/inc/HeapTimer.h	/^class heap_timer {$/;"	c
+main	chapter10/signal_source.c	/^int main(int argc , char** argv) {$/;"	f
+main	chapter11/client.cc	/^int main(int argc , char** argv) {$/;"	f
+main	chapter11/sigHandler.cc	/^int main(int argc , char** argv) {$/;"	f
+main	chapter11/sigHandler_heap.cc	/^int main(int argc , char** argv) {$/;"	f
+main	chapter11/sigHandler_tw.cc	/^int main(int argc , char** argv) {$/;"	f
+main	chapter7/daemon.c	/^int main() {$/;"	f
+main	chapter9/chat_client.c	/^int main(int argc , char** argv) {$/;"	f
+main	chapter9/chat_server.c	/^int main(int argc , char** argv) {$/;"	f
+main	chapter9/client.c	/^int main(int argc , char** argv) {$/;"	f
+main	chapter9/epoll_server.c	/^int main(int argc , char** argv) {$/;"	f
+main	chapter9/epoll_server_et.c	/^int main(int argc , char** argv) {$/;"	f
+main	chapter9/poll_server.c	/^int main(int argc , char** argv) {$/;"	f
+main	chapter9/select_server.c	/^int main(int argc , char** argv) {$/;"	f
+network	chapter10/Makefile	/^network = $(wildcard ..\/utils\/*.c)$/;"	m
+network	chapter11/Makefile	/^network = ..\/utils$/;"	m
+network	chapter9/makefile	/^network = $(wildcard ..\/utils\/*.c)$/;"	m
+networkheader	chapter10/Makefile	/^networkheader = "..\/utils"$/;"	m
+networkimpl	chapter11/Makefile	/^networkimpl = $(wildcard ..\/utils\/*.cc)$/;"	m
+next	chapter11/Timer/inc/LinkedListTimer.h	/^    util_timer* next;  \/* 节点的后面一个节点 *\/$/;"	m	class:util_timer
+next	chapter11/Timer/inc/WheelTimer.h	/^    tw_timer* next; $/;"	m	class:tw_timer
+out	chapter10/Makefile	/^out = $(patsubst %.c,%,$(src))$/;"	m
+out	chapter11/Makefile	/^out = $(patsubst %.cc,%,$(src))$/;"	m
+percolate_down	chapter11/Timer/src/HeapTimer.cc	/^void time_heap::percolate_down(int hole)$/;"	f	class:time_heap
+pipefd	chapter10/signal_source.c	/^int pipefd[2] ;  \/* 用于信号处理的管道 *\/$/;"	v
+pipefd	chapter11/sigHandler.cc	/^static int pipefd[2]; \/* 信号处理的管道 *\/$/;"	v	file:
+pipefd	chapter11/sigHandler_heap.cc	/^static int pipefd[2]; \/* 信号处理的管道 *\/$/;"	v	file:
+pipefd	chapter11/sigHandler_tw.cc	/^static int pipefd[2]; \/* 信号处理的管道 *\/$/;"	v	file:
+pop_timer	chapter11/Timer/src/HeapTimer.cc	/^void time_heap::pop_timer()$/;"	f	class:time_heap
+prev	chapter11/Timer/inc/LinkedListTimer.h	/^    util_timer* prev ;  \/* 节点的前面一个节点 *\/$/;"	m	class:util_timer
+prev	chapter11/Timer/inc/WheelTimer.h	/^    tw_timer* prev;$/;"	m	class:tw_timer
+resize	chapter11/Timer/src/HeapTimer.cc	/^void time_heap::resize() $/;"	f	class:time_heap
+rotation	chapter11/Timer/inc/WheelTimer.h	/^    int rotation ;  \/* 时间轮转到这一个节点需要的圈数 *\/$/;"	m	class:tw_timer
+setnoblocking	utils/network.c	/^int setnoblocking(int fd) {$/;"	f
+setnoblocking	utils/network.cc	/^int setnoblocking(int fd) {$/;"	f
+sig_handler	chapter10/signal_source.c	/^void sig_handler(int sig) {$/;"	f
+sig_handler	chapter11/sigHandler.cc	/^void sig_handler(int sig) $/;"	f
+sig_handler	chapter11/sigHandler_heap.cc	/^void sig_handler(int sig) $/;"	f
+sig_handler	chapter11/sigHandler_tw.cc	/^void sig_handler(int sig) $/;"	f
+slots	chapter11/Timer/inc/WheelTimer.h	/^    tw_timer* slots[N];  \/* 每一个槽子的头节点集合 *\/$/;"	m	class:time_wheel
+sockfd	chapter11/Timer/inc/HeapTimer.h	/^    int sockfd;$/;"	m	struct:client_data
+sockfd	chapter11/Timer/inc/LinkedListTimer.h	/^    int sockfd ;  \/* 连接文件描述符 *\/$/;"	m	struct:client_data
+sockfd	chapter11/Timer/inc/WheelTimer.h	/^    int sockfd;  \/* 通信套接字 *\/$/;"	m	struct:client_data
+sockfd	chapter9/chat_server.c	/^    int sockfd ;  \/* 通信套接字 *\/$/;"	m	struct:__anon1	file:
+sort_timer_list	chapter11/Timer/inc/LinkedListTimer.h	/^    sort_timer_list() : head(nullptr) , tail(nullptr) {}$/;"	f	class:sort_timer_list
+sort_timer_list	chapter11/Timer/inc/LinkedListTimer.h	/^class sort_timer_list {$/;"	c
+src	chapter10/Makefile	/^src = $(wildcard *.c)$/;"	m
+src	chapter11/Makefile	/^src = $(wildcard *.cc)$/;"	m
+src	chapter9/makefile	/^src = $(wildcard *.c)$/;"	m
+tail	chapter11/Timer/inc/LinkedListTimer.h	/^    util_timer* tail;  \/* 尾节点 *\/$/;"	m	class:sort_timer_list
+target	chapter9/makefile	/^target = $(patsubst %.c,%,$(src))$/;"	m
+tick	chapter11/Timer/src/HeapTimer.cc	/^void time_heap::tick()$/;"	f	class:time_heap
+tick	chapter11/Timer/src/LinkedListTimer.cc	/^void sort_timer_list::tick() $/;"	f	class:sort_timer_list
+tick	chapter11/Timer/src/WheelTimer.cc	/^void time_wheel::tick() $/;"	f	class:time_wheel
+time_heap	chapter11/Timer/inc/HeapTimer.h	/^class time_heap {$/;"	c
+time_heap	chapter11/Timer/src/HeapTimer.cc	/^time_heap::time_heap(heap_timer** init_array , int cap , int size): capacity(cap) , cur_size(size)$/;"	f	class:time_heap
+time_heap	chapter11/Timer/src/HeapTimer.cc	/^time_heap::time_heap(int cap): capacity(cap) , cur_size(0) $/;"	f	class:time_heap
+time_slot	chapter11/Timer/inc/WheelTimer.h	/^    int time_slot ;  \/* 定时器位于时间轮的哪一个槽上 *\/$/;"	m	class:tw_timer
+time_wheel	chapter11/Timer/inc/WheelTimer.h	/^class time_wheel {$/;"	c
+time_wheel	chapter11/Timer/src/WheelTimer.cc	/^time_wheel::time_wheel(): cur_slot(0)$/;"	f	class:time_wheel
+timer	chapter11/Makefile	/^timer = .\/Timer\/inc$/;"	m
+timer	chapter11/Timer/inc/HeapTimer.h	/^    heap_timer* timer;$/;"	m	struct:client_data
+timer	chapter11/Timer/inc/LinkedListTimer.h	/^    util_timer* timer;  \/* 绑定的定时器对象 *\/$/;"	m	struct:client_data
+timer	chapter11/Timer/inc/WheelTimer.h	/^    tw_timer* timer; \/* 定时器对象 *\/$/;"	m	struct:client_data
+timer_handler	chapter11/sigHandler.cc	/^void timer_handler()$/;"	f
+timer_handler	chapter11/sigHandler_heap.cc	/^void timer_handler()$/;"	f
+timer_handler	chapter11/sigHandler_tw.cc	/^void timer_handler()$/;"	f
+timer_list	chapter11/sigHandler.cc	/^static sort_timer_list timer_list;  \/* 升序链表 *\/$/;"	v	file:
+timerimpl	chapter11/Makefile	/^timerimpl = $(wildcard .\/Timer\/src\/*.cc)$/;"	m
+top	chapter11/Timer/src/HeapTimer.cc	/^heap_timer* time_heap::top() const$/;"	f	class:time_heap
+tw_timer	chapter11/Timer/inc/WheelTimer.h	/^    tw_timer(int rot , int ts):$/;"	f	class:tw_timer
+tw_timer	chapter11/Timer/inc/WheelTimer.h	/^class tw_timer {$/;"	c
+user	chapter11/Timer/inc/HeapTimer.h	/^    client_data* user;  \/* 回调函数的参数 *\/$/;"	m	class:heap_timer
+user	chapter11/Timer/inc/WheelTimer.h	/^    client_data* user; \/* 用户对象,用于回调函数参数 *\/$/;"	m	class:tw_timer
+util_timer	chapter11/Timer/inc/LinkedListTimer.h	/^    util_timer(): prev(nullptr) , next(nullptr) {}$/;"	f	class:util_timer
+util_timer	chapter11/Timer/inc/LinkedListTimer.h	/^class util_timer {$/;"	c
+wheel	chapter11/sigHandler_tw.cc	/^static time_wheel wheel;  \/* 升序链表 *\/$/;"	v	file:
+~sort_timer_list	chapter11/Timer/src/LinkedListTimer.cc	/^sort_timer_list::~sort_timer_list() $/;"	f	class:sort_timer_list
+~time_heap	chapter11/Timer/src/HeapTimer.cc	/^time_heap::~time_heap() $/;"	f	class:time_heap
+~time_wheel	chapter11/Timer/src/WheelTimer.cc	/^time_wheel::~time_wheel()$/;"	f	class:time_wheel
